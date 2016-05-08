@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18BC463E1CDFBE02006DC885 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BC463D1CDFBE02006DC885 /* main.m */; };
+		18BC46411CDFBE02006DC885 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BC46401CDFBE02006DC885 /* AppDelegate.m */; };
+		18BC46441CDFBE02006DC885 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BC46431CDFBE02006DC885 /* ViewController.m */; };
+		18BC46471CDFBE02006DC885 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BC46451CDFBE02006DC885 /* Main.storyboard */; };
+		18BC464A1CDFBE02006DC885 /* Desafio_M4U.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18BC46481CDFBE02006DC885 /* Desafio_M4U.xcdatamodeld */; };
+		18BC464C1CDFBE02006DC885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BC464B1CDFBE02006DC885 /* Assets.xcassets */; };
+		18BC464F1CDFBE02006DC885 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BC464D1CDFBE02006DC885 /* LaunchScreen.storyboard */; };
+		18BC465A1CDFBE02006DC885 /* Desafio_M4UTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BC46591CDFBE02006DC885 /* Desafio_M4UTests.m */; };
+		18BC46651CDFBE02006DC885 /* Desafio_M4UUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BC46641CDFBE02006DC885 /* Desafio_M4UUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18BC46561CDFBE02006DC885 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18BC46311CDFBE01006DC885 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18BC46381CDFBE01006DC885;
+			remoteInfo = Desafio_M4U;
+		};
+		18BC46611CDFBE02006DC885 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18BC46311CDFBE01006DC885 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18BC46381CDFBE01006DC885;
+			remoteInfo = Desafio_M4U;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18BC46391CDFBE01006DC885 /* Desafio_M4U.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desafio_M4U.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BC463D1CDFBE02006DC885 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18BC463F1CDFBE02006DC885 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18BC46401CDFBE02006DC885 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		18BC46421CDFBE02006DC885 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		18BC46431CDFBE02006DC885 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18BC46461CDFBE02006DC885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18BC46491CDFBE02006DC885 /* Desafio_M4U.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Desafio_M4U.xcdatamodel; sourceTree = "<group>"; };
+		18BC464B1CDFBE02006DC885 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18BC464E1CDFBE02006DC885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18BC46501CDFBE02006DC885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18BC46551CDFBE02006DC885 /* Desafio_M4UTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Desafio_M4UTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BC46591CDFBE02006DC885 /* Desafio_M4UTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Desafio_M4UTests.m; sourceTree = "<group>"; };
+		18BC465B1CDFBE02006DC885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18BC46601CDFBE02006DC885 /* Desafio_M4UUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Desafio_M4UUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BC46641CDFBE02006DC885 /* Desafio_M4UUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Desafio_M4UUITests.m; sourceTree = "<group>"; };
+		18BC46661CDFBE02006DC885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18BC46361CDFBE01006DC885 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BC46521CDFBE02006DC885 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BC465D1CDFBE02006DC885 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18BC46301CDFBE01006DC885 = {
+			isa = PBXGroup;
+			children = (
+				18BC463B1CDFBE01006DC885 /* Desafio_M4U */,
+				18BC46581CDFBE02006DC885 /* Desafio_M4UTests */,
+				18BC46631CDFBE02006DC885 /* Desafio_M4UUITests */,
+				18BC463A1CDFBE01006DC885 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18BC463A1CDFBE01006DC885 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18BC46391CDFBE01006DC885 /* Desafio_M4U.app */,
+				18BC46551CDFBE02006DC885 /* Desafio_M4UTests.xctest */,
+				18BC46601CDFBE02006DC885 /* Desafio_M4UUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18BC463B1CDFBE01006DC885 /* Desafio_M4U */ = {
+			isa = PBXGroup;
+			children = (
+				18BC463F1CDFBE02006DC885 /* AppDelegate.h */,
+				18BC46401CDFBE02006DC885 /* AppDelegate.m */,
+				18BC46421CDFBE02006DC885 /* ViewController.h */,
+				18BC46431CDFBE02006DC885 /* ViewController.m */,
+				18BC46451CDFBE02006DC885 /* Main.storyboard */,
+				18BC464B1CDFBE02006DC885 /* Assets.xcassets */,
+				18BC464D1CDFBE02006DC885 /* LaunchScreen.storyboard */,
+				18BC46501CDFBE02006DC885 /* Info.plist */,
+				18BC46481CDFBE02006DC885 /* Desafio_M4U.xcdatamodeld */,
+				18BC463C1CDFBE01006DC885 /* Supporting Files */,
+			);
+			path = Desafio_M4U;
+			sourceTree = "<group>";
+		};
+		18BC463C1CDFBE01006DC885 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18BC463D1CDFBE02006DC885 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18BC46581CDFBE02006DC885 /* Desafio_M4UTests */ = {
+			isa = PBXGroup;
+			children = (
+				18BC46591CDFBE02006DC885 /* Desafio_M4UTests.m */,
+				18BC465B1CDFBE02006DC885 /* Info.plist */,
+			);
+			path = Desafio_M4UTests;
+			sourceTree = "<group>";
+		};
+		18BC46631CDFBE02006DC885 /* Desafio_M4UUITests */ = {
+			isa = PBXGroup;
+			children = (
+				18BC46641CDFBE02006DC885 /* Desafio_M4UUITests.m */,
+				18BC46661CDFBE02006DC885 /* Info.plist */,
+			);
+			path = Desafio_M4UUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18BC46381CDFBE01006DC885 /* Desafio_M4U */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18BC46691CDFBE02006DC885 /* Build configuration list for PBXNativeTarget "Desafio_M4U" */;
+			buildPhases = (
+				18BC46351CDFBE01006DC885 /* Sources */,
+				18BC46361CDFBE01006DC885 /* Frameworks */,
+				18BC46371CDFBE01006DC885 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Desafio_M4U;
+			productName = Desafio_M4U;
+			productReference = 18BC46391CDFBE01006DC885 /* Desafio_M4U.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18BC46541CDFBE02006DC885 /* Desafio_M4UTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18BC466C1CDFBE02006DC885 /* Build configuration list for PBXNativeTarget "Desafio_M4UTests" */;
+			buildPhases = (
+				18BC46511CDFBE02006DC885 /* Sources */,
+				18BC46521CDFBE02006DC885 /* Frameworks */,
+				18BC46531CDFBE02006DC885 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18BC46571CDFBE02006DC885 /* PBXTargetDependency */,
+			);
+			name = Desafio_M4UTests;
+			productName = Desafio_M4UTests;
+			productReference = 18BC46551CDFBE02006DC885 /* Desafio_M4UTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18BC465F1CDFBE02006DC885 /* Desafio_M4UUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18BC466F1CDFBE02006DC885 /* Build configuration list for PBXNativeTarget "Desafio_M4UUITests" */;
+			buildPhases = (
+				18BC465C1CDFBE02006DC885 /* Sources */,
+				18BC465D1CDFBE02006DC885 /* Frameworks */,
+				18BC465E1CDFBE02006DC885 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18BC46621CDFBE02006DC885 /* PBXTargetDependency */,
+			);
+			name = Desafio_M4UUITests;
+			productName = Desafio_M4UUITests;
+			productReference = 18BC46601CDFBE02006DC885 /* Desafio_M4UUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18BC46311CDFBE01006DC885 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Marcos;
+				TargetAttributes = {
+					18BC46381CDFBE01006DC885 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = V2686JM7D9;
+					};
+					18BC46541CDFBE02006DC885 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = V2686JM7D9;
+						TestTargetID = 18BC46381CDFBE01006DC885;
+					};
+					18BC465F1CDFBE02006DC885 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = V2686JM7D9;
+						TestTargetID = 18BC46381CDFBE01006DC885;
+					};
+				};
+			};
+			buildConfigurationList = 18BC46341CDFBE01006DC885 /* Build configuration list for PBXProject "Desafio_M4U" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18BC46301CDFBE01006DC885;
+			productRefGroup = 18BC463A1CDFBE01006DC885 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18BC46381CDFBE01006DC885 /* Desafio_M4U */,
+				18BC46541CDFBE02006DC885 /* Desafio_M4UTests */,
+				18BC465F1CDFBE02006DC885 /* Desafio_M4UUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18BC46371CDFBE01006DC885 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BC464F1CDFBE02006DC885 /* LaunchScreen.storyboard in Resources */,
+				18BC464C1CDFBE02006DC885 /* Assets.xcassets in Resources */,
+				18BC46471CDFBE02006DC885 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BC46531CDFBE02006DC885 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BC465E1CDFBE02006DC885 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18BC46351CDFBE01006DC885 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BC464A1CDFBE02006DC885 /* Desafio_M4U.xcdatamodeld in Sources */,
+				18BC46441CDFBE02006DC885 /* ViewController.m in Sources */,
+				18BC46411CDFBE02006DC885 /* AppDelegate.m in Sources */,
+				18BC463E1CDFBE02006DC885 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BC46511CDFBE02006DC885 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BC465A1CDFBE02006DC885 /* Desafio_M4UTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BC465C1CDFBE02006DC885 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BC46651CDFBE02006DC885 /* Desafio_M4UUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18BC46571CDFBE02006DC885 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18BC46381CDFBE01006DC885 /* Desafio_M4U */;
+			targetProxy = 18BC46561CDFBE02006DC885 /* PBXContainerItemProxy */;
+		};
+		18BC46621CDFBE02006DC885 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18BC46381CDFBE01006DC885 /* Desafio_M4U */;
+			targetProxy = 18BC46611CDFBE02006DC885 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18BC46451CDFBE02006DC885 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18BC46461CDFBE02006DC885 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18BC464D1CDFBE02006DC885 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18BC464E1CDFBE02006DC885 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18BC46671CDFBE02006DC885 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		18BC46681CDFBE02006DC885 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18BC466A1CDFBE02006DC885 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Desafio_M4U/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.mfelipesp.Desafio-M4U";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18BC466B1CDFBE02006DC885 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Desafio_M4U/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.mfelipesp.Desafio-M4U";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		18BC466D1CDFBE02006DC885 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Desafio_M4UTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.mfelipesp.Desafio-M4UTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desafio_M4U.app/Desafio_M4U";
+			};
+			name = Debug;
+		};
+		18BC466E1CDFBE02006DC885 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Desafio_M4UTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.mfelipesp.Desafio-M4UTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desafio_M4U.app/Desafio_M4U";
+			};
+			name = Release;
+		};
+		18BC46701CDFBE02006DC885 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Desafio_M4UUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.mfelipesp.Desafio-M4UUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Desafio_M4U;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		18BC46711CDFBE02006DC885 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Desafio_M4UUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.mfelipesp.Desafio-M4UUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Desafio_M4U;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18BC46341CDFBE01006DC885 /* Build configuration list for PBXProject "Desafio_M4U" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BC46671CDFBE02006DC885 /* Debug */,
+				18BC46681CDFBE02006DC885 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18BC46691CDFBE02006DC885 /* Build configuration list for PBXNativeTarget "Desafio_M4U" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BC466A1CDFBE02006DC885 /* Debug */,
+				18BC466B1CDFBE02006DC885 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		18BC466C1CDFBE02006DC885 /* Build configuration list for PBXNativeTarget "Desafio_M4UTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BC466D1CDFBE02006DC885 /* Debug */,
+				18BC466E1CDFBE02006DC885 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		18BC466F1CDFBE02006DC885 /* Build configuration list for PBXNativeTarget "Desafio_M4UUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BC46701CDFBE02006DC885 /* Debug */,
+				18BC46711CDFBE02006DC885 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		18BC46481CDFBE02006DC885 /* Desafio_M4U.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				18BC46491CDFBE02006DC885 /* Desafio_M4U.xcdatamodel */,
+			);
+			currentVersion = 18BC46491CDFBE02006DC885 /* Desafio_M4U.xcdatamodel */;
+			path = Desafio_M4U.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 18BC46311CDFBE01006DC885 /* Project object */;
+}
