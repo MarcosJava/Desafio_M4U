@@ -8,21 +8,15 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import "Pessoa.h"
+#import "Dao.h"
 
-@interface PessoaDao : NSObject
+@interface PessoaDao : Dao
+
 +(id) criarInstancia;
 - (id) instanciarPessoa;
 - (NSArray *) carregaTodasPessoas;
 -(BOOL) emailCadastrado: (NSString *) email;
 - (Pessoa *) carregarPessoaComEmail: (NSString *)email eSenha: (NSString*) senha;
 
-
-//PARTE DO CORE DATA
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
-- (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
 
 @end

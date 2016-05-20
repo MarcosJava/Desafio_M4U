@@ -53,8 +53,8 @@
 -(void) carregarPessoas {
     NSArray *pessoas = [_pessoaDao carregaTodasPessoas];
     for (Pessoa *p in pessoas) {
-        NSLog(p.email);
-        NSLog(p.senha);
+        NSLog(@"%@", p.email);
+        NSLog(@"%@", p.senha);
     }
     
 }

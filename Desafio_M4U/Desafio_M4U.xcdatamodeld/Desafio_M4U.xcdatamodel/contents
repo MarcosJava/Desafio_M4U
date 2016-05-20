@@ -4,7 +4,12 @@
         <attribute name="email" attributeType="String" syncable="YES"/>
         <attribute name="senha" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Produto" representedClassName=".Produto" syncable="YES">
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="valor" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Pessoa" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Produto" positionX="-63" positionY="0" width="128" height="75"/>
     </elements>
 </model>

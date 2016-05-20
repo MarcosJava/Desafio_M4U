@@ -12,17 +12,15 @@
 
 @synthesize nomeArte = _nomeArte;
 @synthesize valorArte = _valorArte;
-@synthesize imagem = _imagem;
+@synthesize imagemArte = _imagemArte;
 
 - (void)awakeFromNib {
     // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    
     [super setSelected:selected animated:animated];
-    NSLog(@"Cell !");
-    NSLog(_nomeArte.text);
-
 }
 
 @end

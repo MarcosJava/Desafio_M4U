@@ -6,7 +6,9 @@
 //  Copyright © 2016 Marcos. All rights reserved.
 //
 
+#import "CellCompraArte.h"
 #import "ComprarArtesViewController.h"
+#import "CarrinhoAddViewController.h"
 #import "AFNetworking.h"
 #import "UIImageView+AFNetworking.h"
 
@@ -16,31 +18,43 @@
 
 @implementation ComprarArtesViewController
 
+static NSString *url = @"http://bit.ly/livroios-500px";
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _produtoBusiness = [ProdutoBusiness new];
+    self.tableView.delegate = self;
+    _semInternet = NO;
+    
+    [self createPushRefresh];
     [self iniciarCabecalho];
     [self iniciarLoading];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /***
  Monta o NavigationBar , com titulo e buttonItem.
  ***/
 -(void) iniciarCabecalho {
+    
+    
+    self.navigationItem.title = @"Comprar Artes";
+    
     UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logout)];
     barButtonItem.title = @"Logout";
     self.navigationItem.rightBarButtonItem = barButtonItem;
     
 }
 
-
+/***
+ Leitura do JSON
+ ***/
 -(void) iniciarLoading {
-    NSString *url = @"http://bit.ly/livroios-500px";
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -48,88 +62,116 @@
     [manager GET:url parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         
         _elementos = responseObject[@"photos"];
-        [self mostraMensagem: [NSString stringWithFormat:@"%lu imagens encontradas" , (unsigned long)_elementos.count]];
+        NSLog(@"%@", [NSString stringWithFormat:@"%lu imagens encontradas" , (unsigned long)_elementos.count]);
         
         if (_elementos.count > 0) {
-            //Monta o Objeto
-            
+            [_tableView reloadData];
+            _imagens = [NSMutableArray new];
         }
         
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
-        [self mostraMensagem:[NSString stringWithFormat:@"Erro: %@",[error localizedDescription]]];
+         NSLog(@"%@",[NSString stringWithFormat:@"Erro: %@ e codigo %ld",[error localizedDescription], (long)[error code]]);
+        
+        if (error.code == -1009) {
+            _semInternet = YES;
+        }
+        
     }];
 
 }
 
 
+/***
+    Configura o Push Refresh
+ ***/
+- (void) createPushRefresh{
+    self.refresh = [[UIRefreshControl alloc] init];
+    self.refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Atualizando ;)"];
+    [self.tableView addSubview:self.refresh];
+    [self.refresh addTarget:self action:@selector(refreshTable)   forControlEvents:UIControlEventValueChanged];
+}
+
+
+/***
+ Executa o push refresh
+ ***/
+- (void)refreshTable {
+    //TODO: refresh your data
+    [self iniciarLoading];
+    [self.refresh endRefreshing];
+}
+
+
+
+/***
+ SAI DO SISTEMA
+ ***/
 -(void) logout {
     [self.view.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
--(void) mostraMensagem:(NSString *) message {
-    NSLog(@"%@", message);
-}
 
--(UIImageView *) carregaImagemRemota: (int) indice {
+/***
+ CARREGA A IMAGEM REMOTA, APENAS A IMAGEM.
+ ***/
+-(void) carregaImagemRemota: (CellCompraArte*) cell eIndexRow:(NSInteger) indice {
     
-    NSDictionary *item = _elementos[indice];
-    NSDictionary *imageInfo = item[@"images"][0];
-    NSString *url = imageInfo[@"url"];
+    __weak CellCompraArte *weakCell = cell;
     
-    NSLog(@"Carregando a URL : %@", url);
+    Produto *produto = [_produtoBusiness buscarProdutoComIndice:indice];
+    NSString *valor = [[NSString alloc]initWithFormat:@"VALOR: R$ %0.2f", produto.valor];
     
-    UIImageView *img = _imagens[indice];
-    img.contentMode = UIViewContentModeScaleAspectFill;
-    [img setImageWithURL:[NSURL URLWithString:url]];
-    return img;
+    weakCell.nomeArte.text = produto.nome;
+    weakCell.valorArte.text = valor;
+
+    if (!_semInternet) {
+        NSDictionary *item = _elementos[indice];
+        NSDictionary *imageInfo = item[@"images"][0];
+        NSString *urlImagem = imageInfo[@"url"];
+        NSURL *urlRequest = [NSURL URLWithString:urlImagem];
+        NSURLRequest *request = [NSURLRequest requestWithURL:urlRequest];
+        UIImage *placeholderImage = [UIImage imageNamed:@"photos"];
+        
+        [cell.imagemArte setImageWithURLRequest:request
+                               placeholderImage:placeholderImage
+                                        success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                                            
+                                            weakCell.imagemArte.image = image;
+                                            [_imagens addObject:image];
+                                            [weakCell setNeedsLayout];
+                                            
+                                        } failure:nil];
+    }
+    
+   
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;//_elementos.count;
+    return [_produtoBusiness qtdeProduto];
 }
 
+/***
+ Preenche a tabela
+ ***/
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    CellCompraArte *cell = [[CellCompraArte alloc]init];
-//    static NSString *CelulaCache = @"CellCompraArtes";
-//    cell = [self.tableView dequeueReusableCellWithIdentifier:CelulaCache];
-//    
-//    if (cell) {
-//        cell = [[CellCompraArte alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CelulaCache];
-//    }
-//    
-//
-//
-//
-//    cell.imagem = [self arredondarFoto:cell.imagem];
     
-    static NSString *simpleTableIdentifier = @"CellCompraArtes";
-    
-    CellCompraArte *cell = (CellCompraArte *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    if (cell)
-    {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CellCompraArtes" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+    static NSString *cellIdentifier = @"CellCompraArte";
+    CellCompraArte *cell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell = [[CellCompraArte alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
+    [self carregaImagemRemota:cell eIndexRow:indexPath.row];
     
-    int r = arc4random_uniform(74);
-    NSString *valor = [[NSString alloc]initWithFormat:@"%d", r];
-    
-    cell.nomeArte.text = @"Marcos";
-    cell.valorArte.text = valor;
-    
-    UIImageView *imagem = [UIImageView new];
-    imagem.image = [UIImage imageNamed:@"bug.png"];
-    
-    cell.imagem.image = imagem.image;
-
+    [self arredondarFoto:cell.imagemArte];
     return cell;
 }
 
 /**
  
- Arredondar Foto
+ Arredondar Foto, muda a foto por referencia
  */
--(UIImageView*) arredondarFoto: (UIImageView*)imageView{
+-(void) arredondarFoto: (UIImageView*)imageView{
     CGRect frame = [imageView frame];
     frame.size.width = 50;
     frame.size.height = 50;
@@ -138,12 +180,50 @@
     imageView.layer.cornerRadius = 25;
     imageView.layer.masksToBounds = YES;
     
-    return imageView;
 }
 
 
+/*** 
+ Toque na tela
+ ***/
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    self.produtoSelecionado = indexPath.row;
+
+    [self iniciaAddCarrinho];
+    
+    //Acabando a animacao do toque
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+-(void) iniciaAddCarrinho {
+    
+    
+    if (self.produtoSelecionado) {
+        CarrinhoAddViewController *addCarrinho = [[CarrinhoAddViewController alloc] initWithNibName:@"CarrinhoAddViewController" bundle:nil];
+        
+        addCarrinho.delegate = self;
+        addCarrinho.produto = [_produtoBusiness buscarProdutoComIndice: self.produtoSelecionado];
+        if (!_semInternet) {
+            addCarrinho.imagemCarregada = [_imagens objectAtIndex:_produtoSelecionado];
+        }
+        [self.navigationController pushViewController:addCarrinho animated:YES];
+        //[self presentViewController:addCarrinho animated:YES completion:nil];
+    }
+}
 
 
+/***
+    DELEGATE DO CARRINHO ADD
+ ***/
+- (void)adicionadoAoCarrinho:(BOOL)adicionado oProduto:(Produto *)produto {
+    
+    if (adicionado) {
+        [_produtoBusiness addProdutoNoCarrinho:produto];
+        
+    }
+    
+}
 
 #pragma mark - Navigation
 

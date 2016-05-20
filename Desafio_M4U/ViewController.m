@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.senhaTx.hidden = YES;
+    
+    //Arredondar botao
+    self.entrarBtn.layer.cornerRadius = 5;
+    
     self.estaCadastrando = YES;
     
     
@@ -131,17 +134,26 @@
     
     //Esconde a senha e so exibe quando o email estiver ok
     if ([self emailValido] && _estaCadastrando) {
-        self.senhaTx.hidden = NO;
+        [self ativarSenha];
     
     //Mostra a senha quando estiver no cadastro
     } else if (!_estaCadastrando){
-        self.senhaTx.hidden = NO;
+        [self ativarSenha];
         
     } else {
-        self.senhaTx.hidden = YES;
+        [self desativarSenha];
     }
 }
 
+-(void) desativarSenha {
+    self.senhaTx.alpha = 0.2f;
+    self.senhaTx.enabled = NO;
+}
+
+-(void) ativarSenha {
+    self.senhaTx.alpha = 1;
+    self.senhaTx.enabled = TRUE;
+}
 
 /***
     Ação que muda o cadastrar para o registrar.
@@ -152,13 +164,13 @@
         self.estaCadastrando = NO;
         [_registrarBtn setTitle:@"Ja sou cadastrado, entrar !" forState:UIControlStateNormal];
         [_entrarBtn setTitle:@"Cadastrar" forState:UIControlStateNormal];
-        _senhaTx.hidden = NO;
+        [self ativarSenha];
         
     } else {
         self.estaCadastrando = YES;
         [_registrarBtn setTitle:@"Registra-se" forState:UIControlStateNormal];
         [_entrarBtn setTitle:@"Entrar" forState:UIControlStateNormal];
-        _senhaTx.hidden = YES;
+        [self desativarSenha];
     }
 }
 

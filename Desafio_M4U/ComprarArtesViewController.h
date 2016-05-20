@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CellCompraArte.h"
+#import "Produto.h"
+#import "ProdutoBusiness.h"
+#import "CarrinhoAddViewController.h"
 
-@interface ComprarArtesViewController : UITableViewController
+@interface ComprarArtesViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, CarrinhoAddViewControllerDelegate>
 
 //Apenas as imagens
 @property (retain, nonatomic) NSMutableArray *imagens;
@@ -17,5 +19,13 @@
 //Elementos do Rest
 @property (retain, nonatomic) NSArray *elementos;
 
+@property(assign,nonatomic) BOOL semInternet;
+
+@property (strong, nonatomic) ProdutoBusiness *produtoBusiness;
+@property UIRefreshControl *refresh;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic) NSInteger produtoSelecionado;
 
 @end
