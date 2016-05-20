@@ -19,5 +19,5 @@ AFNetworking para demonstrar o serviço JSON, pois não conseguir utilizar o Swa
 Tentei o máximo demonstrar tudo que eu conheço, eu amo desenvolver em iOS, sou apaixonado pela profissão.
 <br />
 
-Observação : Deixei publico, pois a atendente do Rh não sabia quem eu colocava no meu repositorio privado. <br />
-E eu colocava o rh@ ... e não tinha aceito no repositorio, logo publiquei aqui para não perder a oportunidade !
+<b>Observação : Deixei publico, pois a atendente do Rh não sabia quem eu colocava no meu repositorio privado. <br />
+E eu colocava o rh@ ... e não tinha aceito no repositorio, logo publiquei aqui para não perder a oportunidade !</b>
