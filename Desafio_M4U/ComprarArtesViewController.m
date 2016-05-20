@@ -65,8 +65,8 @@ static NSString *url = @"http://bit.ly/livroios-500px";
         NSLog(@"%@", [NSString stringWithFormat:@"%lu imagens encontradas" , (unsigned long)_elementos.count]);
         
         if (_elementos.count > 0) {
+           // _imagens = [NSMutableArray new];
             [_tableView reloadData];
-            _imagens = [NSMutableArray new];
         }
         
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
@@ -88,7 +88,7 @@ static NSString *url = @"http://bit.ly/livroios-500px";
     self.refresh = [[UIRefreshControl alloc] init];
     self.refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Atualizando ;)"];
     [self.tableView addSubview:self.refresh];
-    [self.refresh addTarget:self action:@selector(refreshTable)   forControlEvents:UIControlEventValueChanged];
+    [self.refresh addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
 }
 
 
@@ -137,7 +137,6 @@ static NSString *url = @"http://bit.ly/livroios-500px";
                                         success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
                                             
                                             weakCell.imagemArte.image = image;
-                                            [_imagens addObject:image];
                                             [weakCell setNeedsLayout];
                                             
                                         } failure:nil];
@@ -188,7 +187,7 @@ static NSString *url = @"http://bit.ly/livroios-500px";
  ***/
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    self.produtoSelecionado = indexPath.row;
+    self.produtoSelecionado = indexPath;
 
     [self iniciaAddCarrinho];
     
@@ -203,9 +202,10 @@ static NSString *url = @"http://bit.ly/livroios-500px";
         CarrinhoAddViewController *addCarrinho = [[CarrinhoAddViewController alloc] initWithNibName:@"CarrinhoAddViewController" bundle:nil];
         
         addCarrinho.delegate = self;
-        addCarrinho.produto = [_produtoBusiness buscarProdutoComIndice: self.produtoSelecionado];
+        addCarrinho.produto = [_produtoBusiness buscarProdutoComIndice: self.produtoSelecionado.row];
         if (!_semInternet) {
-            addCarrinho.imagemCarregada = [_imagens objectAtIndex:_produtoSelecionado];
+            CellCompraArte *cell = [self.tableView cellForRowAtIndexPath:_produtoSelecionado];
+            addCarrinho.imagemCarregada = cell.imagemArte.image;
         }
         [self.navigationController pushViewController:addCarrinho animated:YES];
         //[self presentViewController:addCarrinho animated:YES completion:nil];

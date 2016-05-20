@@ -14,7 +14,7 @@
 @interface ComprarArtesViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, CarrinhoAddViewControllerDelegate>
 
 //Apenas as imagens
-@property (retain, nonatomic) NSMutableArray *imagens;
+//@property (retain, nonatomic) NSMutableArray *imagens;
 
 //Elementos do Rest
 @property (retain, nonatomic) NSArray *elementos;
@@ -26,6 +26,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (nonatomic) NSInteger produtoSelecionado;
+@property (nonatomic) NSIndexPath *produtoSelecionado;
 
 @end
