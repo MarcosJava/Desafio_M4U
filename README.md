@@ -16,5 +16,14 @@ Xibs para demonstrar a navegações separadas.
 <br /><br />
 AFNetworking para demonstrar o serviço JSON, pois não conseguir utilizar o Swagger Yaml, o script veio com erro e a RH não soube informa como prosseguir. 
 <br /><br />
+
+
+<p> Para o Git a historia foi a seguinte : </p>
+<p>Ja tinha um projeto no Master (producao), tinha que fazer umas mudanças no README.md.</p>
+<p>Logo eu tive que fazer um branch para aplicar a alteração.</p>
+<p>Depois que terminei de realizar todos os buildings, testes e tudo dar certo.</p>
+<p>Eu tive que fazer o Merger do Branch de alteração para a Branch de produção. </p>
+
+
 Tentei o máximo demonstrar tudo que eu conheço, eu amo desenvolver em iOS, sou apaixonado pela profissão.
 <br /><br />
