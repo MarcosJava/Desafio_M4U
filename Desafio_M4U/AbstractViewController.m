@@ -14,8 +14,10 @@
 
 @implementation AbstractViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.usuarioSessao = [UsuarioSessao instanciar];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,5 +34,18 @@
         [[self.tabBarController.tabBar.items objectAtIndex:1] setBadgeValue:qtdString];
     }
 }
+
+-(void) addPessoaSessao:(NSString*) email{
+    if (email) {
+        [self.usuarioSessao setValue:email forKey:@"email"];
+    }
+}
+-(Pessoa *) getPessoaSessao {
+    PessoaBusiness *pBusiness = [PessoaBusiness new];
+    return [pBusiness carregarPessoaComEmail:self.usuarioSessao.email];
+}
+
+
+
 
 @end

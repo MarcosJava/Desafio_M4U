@@ -17,7 +17,7 @@
 -(id)instanciarProduto;
 
 -(NSString*) addProdutoNoCarrinho: (Produto*) produto;
--(NSString*) realizarCompra;
+-(void) realizarCompra;
 -(NSInteger) qtdeProduto;
 -(NSInteger) qtdeCarrinho;
 -(NSArray *) produtos;

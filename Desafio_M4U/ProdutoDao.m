@@ -84,6 +84,10 @@ static ProdutoDao *instanciaProdutoDao;
     [super saveContext];
 }
 
+-(void)esvaziarCarrinho {
+    _carrinhos = [NSMutableArray new];
+}
+
 -(BOOL) primeiraVez{
     
     NSUserDefaults *configuracoes = [NSUserDefaults standardUserDefaults];

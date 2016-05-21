@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "ProdutoBusiness.h"
+#import "Pessoa.h"
+#import "UsuarioSessao.h"
+#import "PessoaBusiness.h"
 
 @interface AbstractViewController : UIViewController
 
 @property ProdutoBusiness *produtoBusiness;
+@property UsuarioSessao *usuarioSessao;
 -(void) alterarBagdeCarrinho;
+-(void) addPessoaSessao:(NSString*) email;
+-(Pessoa *) getPessoaSessao;
+
 
 @end

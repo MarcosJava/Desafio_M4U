@@ -24,6 +24,13 @@
     
     _pessoaBusiness = [PessoaBusiness new];
     [_pessoaBusiness carregarPessoas];
+    
+    NSString *email = super.usuarioSessao.email;
+    email = [email stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    if (![email isEqualToString:@""]) {
+        [self performSegueWithIdentifier:@"goEntrar" sender:self];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -81,8 +88,9 @@
  ***/
 - (void) entrarAplicacao {
     
-    BOOL validarLogin = [_pessoaBusiness validarEmail:_emailTx.text eComSenha:_senhaTx.text];
-    if (validarLogin) {
+    Pessoa *pessoa = [_pessoaBusiness validarEmail:_emailTx.text eComSenha:_senhaTx.text];
+    if (pessoa) {
+        [super addPessoaSessao:_emailTx.text];
         [self performSegueWithIdentifier:@"goEntrar" sender:self];
     } else {
         [self exibirAlertaComTitulo:@"Login Inválido" eComMensagem:@"Email ou Senha inválidos"];

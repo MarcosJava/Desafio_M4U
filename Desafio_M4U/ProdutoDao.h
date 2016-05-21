@@ -26,4 +26,5 @@
 -(id) buscarCarrinhoComIndice: (NSInteger) indice;
 -(float) valorTotalCarrinho;
 - (void) removeCarrinhosNoIndice:(NSInteger) indice;
+-(void)esvaziarCarrinho;
 @end

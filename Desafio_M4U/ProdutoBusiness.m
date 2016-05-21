@@ -43,8 +43,8 @@
     
 }
 
--(NSString *)realizarCompra {
-    return nil;
+-(void)realizarCompra {
+    [_produtoDao esvaziarCarrinho];
 }
 
 -(NSInteger)qtdeProduto{

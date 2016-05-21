@@ -106,6 +106,7 @@ static NSString *url = @"http://bit.ly/livroios-500px";
  SAI DO SISTEMA
  ***/
 -(void) logout {
+    [super addPessoaSessao:@""];
     [self.view.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
 }
 

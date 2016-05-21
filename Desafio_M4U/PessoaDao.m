@@ -11,17 +11,17 @@
 @implementation PessoaDao
 
 // Instancia do Singleton
-static PessoaDao *createInstance = nil;
+static PessoaDao *criarInstancia = nil;
 
 /***
     CONSTRUTOR Singleton
  ***/
 +(id) criarInstancia {
     
-    if(createInstance == nil) {
-        createInstance = [PessoaDao new];
+    if(criarInstancia == nil) {
+        criarInstancia = [PessoaDao new];
     }
-    return createInstance;
+    return criarInstancia;
 }
 
 
@@ -110,7 +110,28 @@ static PessoaDao *createInstance = nil;
     return nil;
 }
 
-
+- (Pessoa *) carregarPessoaComEmail: (NSString *)email {
+    
+    NSFetchRequest * busca = [NSFetchRequest fetchRequestWithEntityName:@"Pessoa"];
+    NSPredicate *consulta = [NSPredicate predicateWithFormat:@"email == %@", email];
+    [busca setPredicate:consulta];
+    
+    
+    NSError *error = nil;
+    
+    NSArray *resultado = [super.managedObjectContext executeFetchRequest:busca error:&error];
+    
+    if (!resultado) {
+        NSLog(@"Error : %@\n%@", [error localizedDescription], [error userInfo]);
+        abort();
+        
+    } else if (resultado.count > 0) { //Pq o email atual já fica pre cadastrado.
+        return [resultado objectAtIndex:0];
+    } else if (resultado.count == 0) {
+        return nil;
+    }
+    return nil;
+}
 
 
 

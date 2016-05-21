@@ -18,6 +18,7 @@
 -(NSString *) savarPessoa: (Pessoa *) pessoa;
 -(void) carregarPessoas;
 -(Pessoa *) instanciaPessoa;
-- (BOOL) validarEmail:(NSString*) email eComSenha:(NSString*) senha;
+- (Pessoa *) validarEmail:(NSString*) email eComSenha:(NSString*) senha;
+- (Pessoa *) carregarPessoaComEmail: (NSString *)email;
 
 @end

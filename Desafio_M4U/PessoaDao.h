@@ -17,6 +17,7 @@
 - (NSArray *) carregaTodasPessoas;
 -(BOOL) emailCadastrado: (NSString *) email;
 - (Pessoa *) carregarPessoaComEmail: (NSString *)email eSenha: (NSString*) senha;
+- (Pessoa *) carregarPessoaComEmail: (NSString *)email;
 
 
 @end

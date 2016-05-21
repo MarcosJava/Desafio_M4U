@@ -11,9 +11,10 @@
 #import "PessoaBusiness.h"
 #import "Constants.h"
 #import "ComprarArtesViewController.h"
+#import "AbstractViewController.h"
 
 
-@interface ViewController : UIViewController
+@interface ViewController : AbstractViewController
 
 
 @property (weak, nonatomic) IBOutlet UITextField *emailTx;

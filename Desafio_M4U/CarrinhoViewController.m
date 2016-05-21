@@ -59,6 +59,20 @@ static NSString *mensagemSheet = @"Escolha a opção";
     
 }
 
+- (void) realizarCompras {
+    self.pessoa = [super getPessoaSessao];
+    NSLog(@"A pessoa %@", self.pessoa.email);
+    NSLog(@"Comprou %@ e o total deu %@ e seus produtos :", self.qtdeItem.text, self.valor.text);
+    for (Produto *p in [self.produtoBusiness carrinhos]) {
+        NSLog(@"%@",p.nome);
+    }
+    
+    [self exibirAlertaComTitulo:@"Parabéns" eComMensagem:@"Compras Realizadas com Sucesso"];
+    [self.produtoBusiness realizarCompra];
+    [self popularView];
+    [super alterarBagdeCarrinho];
+
+}
 
 -(void) exibirAlertaComTitulo: (NSString *) titulo eComMensagem: (NSString *) mensagem {
     UIAlertController *alerta = [UIAlertController alertControllerWithTitle:titulo message:mensagem preferredStyle:UIAlertControllerStyleAlert];
@@ -79,7 +93,7 @@ static NSString *mensagemSheet = @"Escolha a opção";
        style:UIAlertActionStyleDefault
     handler:^(UIAlertAction * action) {
     
-    
+        [self realizarCompras];
     }];
     
     UIAlertAction *actionNao = [UIAlertAction actionWithTitle:@"Não"
@@ -142,9 +156,9 @@ static NSString *mensagemSheet = @"Escolha a opção";
     }
     Produto *produto = [self.produtoBusiness buscarCarrinhoComIndice:indexPath.row];
     
-    //TODO: por o valor do item
-    cell.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:13];
+    cell.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:15];
     cell.textLabel.text = produto.nome;
+    cell.detailTextLabel.text = [NSString stringWithFormat: @"R$ %0.2f", produto.valor];
     cell.imageView.layer.cornerRadius = 5.0;
     return cell;
 }

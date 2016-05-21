@@ -27,6 +27,7 @@
 		18C5A4D91CEE97EB004F454E /* comprar.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C5A4D81CEE97EB004F454E /* comprar.png */; };
 		18C5A4DD1CEEA7E3004F454E /* CarrinhoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5A4DC1CEEA7E3004F454E /* CarrinhoViewController.m */; };
 		18C5A4E31CEFDD69004F454E /* AbstractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5A4E21CEFDD69004F454E /* AbstractViewController.m */; };
+		18C5A4E71CF000C5004F454E /* UsuarioSessao.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5A4E61CF000C5004F454E /* UsuarioSessao.m */; };
 		18DF932B1CE1332200943A2A /* PessoaDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF932A1CE1332200943A2A /* PessoaDao.m */; };
 		18DF932D1CE1337500943A2A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DF932C1CE1337500943A2A /* CoreData.framework */; };
 		18DF93331CE13BAD00943A2A /* Pessoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF93321CE13BAD00943A2A /* Pessoa.m */; };
@@ -90,6 +91,8 @@
 		18C5A4DC1CEEA7E3004F454E /* CarrinhoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarrinhoViewController.m; sourceTree = "<group>"; };
 		18C5A4E11CEFDD69004F454E /* AbstractViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractViewController.h; sourceTree = "<group>"; };
 		18C5A4E21CEFDD69004F454E /* AbstractViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractViewController.m; sourceTree = "<group>"; };
+		18C5A4E51CF000C5004F454E /* UsuarioSessao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuarioSessao.h; sourceTree = "<group>"; };
+		18C5A4E61CF000C5004F454E /* UsuarioSessao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsuarioSessao.m; sourceTree = "<group>"; };
 		18DF93291CE1332200943A2A /* PessoaDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PessoaDao.h; sourceTree = "<group>"; };
 		18DF932A1CE1332200943A2A /* PessoaDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PessoaDao.m; sourceTree = "<group>"; };
 		18DF932C1CE1337500943A2A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -161,6 +164,7 @@
 		18BC463B1CDFBE01006DC885 /* Desafio_M4U */ = {
 			isa = PBXGroup;
 			children = (
+				18C5A4E41CF0009B004F454E /* util */,
 				18C5A4DA1CEE97F7004F454E /* imagem */,
 				18F36CF01CE5728F0035E80B /* view */,
 				18DF93251CE12FA800943A2A /* model */,
@@ -210,6 +214,15 @@
 				18C5A4D41CEE9792004F454E /* carrinho.png */,
 			);
 			name = imagem;
+			sourceTree = "<group>";
+		};
+		18C5A4E41CF0009B004F454E /* util */ = {
+			isa = PBXGroup;
+			children = (
+				18C5A4E51CF000C5004F454E /* UsuarioSessao.h */,
+				18C5A4E61CF000C5004F454E /* UsuarioSessao.m */,
+			);
+			name = util;
 			sourceTree = "<group>";
 		};
 		18CEE0751CE0217300746B73 /* ViewController */ = {
@@ -502,6 +515,7 @@
 			files = (
 				18DF93331CE13BAD00943A2A /* Pessoa.m in Sources */,
 				18F36CF31CE572F50035E80B /* CellCompraArte.m in Sources */,
+				18C5A4E71CF000C5004F454E /* UsuarioSessao.m in Sources */,
 				18DF933A1CE2CDF900943A2A /* PessoaBusiness.m in Sources */,
 				18BC464A1CDFBE02006DC885 /* Desafio_M4U.xcdatamodeld in Sources */,
 				18C5A4D01CEE87E4004F454E /* CarrinhoAddViewController.m in Sources */,

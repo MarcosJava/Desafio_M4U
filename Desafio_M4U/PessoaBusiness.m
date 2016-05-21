@@ -59,12 +59,12 @@
     
 }
 
-- (BOOL) validarEmail:(NSString*) email eComSenha:(NSString*) senha {
-    Pessoa *p = [_pessoaDao carregarPessoaComEmail:email eSenha:senha];
-    if (p) {
-        return YES;
-    }
-    return NO;
+- (Pessoa *) validarEmail:(NSString*) email eComSenha:(NSString*) senha {
+    return [_pessoaDao carregarPessoaComEmail:email eSenha:senha];
+}
+
+- (Pessoa *) carregarPessoaComEmail: (NSString *)email {
+    return [self.pessoaDao carregarPessoaComEmail:email];
 }
 
 @end

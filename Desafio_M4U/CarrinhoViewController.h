@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ProdutoBusiness.h"
+#import "Pessoa.h"
 #import "AbstractViewController.h"
 
 @interface CarrinhoViewController : AbstractViewController<UITableViewDataSource, UITableViewDelegate>
@@ -20,6 +21,7 @@
 - (IBAction)finalizarCompras:(id)sender;
 - (IBAction)editar:(id)sender;
 
+@property Pessoa *pessoa;
 
 
 //PROPRIEDADE CLASSE
