@@ -25,5 +25,9 @@ AFNetworking para demonstrar o serviço JSON, pois não conseguir utilizar o Swa
 <p>Eu tive que fazer o Merger do Branch de alteração para a Branch de produção. </p>
 
 
+<br /><br />
+
+Projeto se encontra no bitbucket, eu enviei uma solicitação para o rh@m4u.com.br , para ter acesso de visualização para que a equipe faça o clone do projeto caso necessario. <br /><br />
+
 Tentei o máximo demonstrar tudo que eu conheço, eu amo desenvolver em iOS, sou apaixonado pela profissão.
 <br /><br />
