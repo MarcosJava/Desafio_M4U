@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ProdutoBusiness.h"
+#import "AbstractViewController.h"
 
-@interface CarrinhoViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface CarrinhoViewController : AbstractViewController<UITableViewDataSource, UITableViewDelegate>
 
 //PROPRIEDADE VIEW
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

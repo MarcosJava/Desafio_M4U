@@ -10,8 +10,8 @@
 #import "Produto.h"
 #import "ProdutoBusiness.h"
 #import "CarrinhoAddViewController.h"
-
-@interface ComprarArtesViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, CarrinhoAddViewControllerDelegate>
+#import "AbstractViewController.h"
+@interface ComprarArtesViewController : AbstractViewController<UITableViewDataSource, UITableViewDelegate, CarrinhoAddViewControllerDelegate>
 
 //Apenas as imagens
 //@property (retain, nonatomic) NSMutableArray *imagens;

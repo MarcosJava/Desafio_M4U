@@ -26,6 +26,7 @@
 		18C5A4D71CEE97D3004F454E /* cancelar.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C5A4D61CEE97D3004F454E /* cancelar.png */; };
 		18C5A4D91CEE97EB004F454E /* comprar.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C5A4D81CEE97EB004F454E /* comprar.png */; };
 		18C5A4DD1CEEA7E3004F454E /* CarrinhoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5A4DC1CEEA7E3004F454E /* CarrinhoViewController.m */; };
+		18C5A4E31CEFDD69004F454E /* AbstractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5A4E21CEFDD69004F454E /* AbstractViewController.m */; };
 		18DF932B1CE1332200943A2A /* PessoaDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF932A1CE1332200943A2A /* PessoaDao.m */; };
 		18DF932D1CE1337500943A2A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DF932C1CE1337500943A2A /* CoreData.framework */; };
 		18DF93331CE13BAD00943A2A /* Pessoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF93321CE13BAD00943A2A /* Pessoa.m */; };
@@ -87,6 +88,8 @@
 		18C5A4D81CEE97EB004F454E /* comprar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comprar.png; sourceTree = "<group>"; };
 		18C5A4DB1CEEA7E3004F454E /* CarrinhoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarrinhoViewController.h; sourceTree = "<group>"; };
 		18C5A4DC1CEEA7E3004F454E /* CarrinhoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarrinhoViewController.m; sourceTree = "<group>"; };
+		18C5A4E11CEFDD69004F454E /* AbstractViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractViewController.h; sourceTree = "<group>"; };
+		18C5A4E21CEFDD69004F454E /* AbstractViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractViewController.m; sourceTree = "<group>"; };
 		18DF93291CE1332200943A2A /* PessoaDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PessoaDao.h; sourceTree = "<group>"; };
 		18DF932A1CE1332200943A2A /* PessoaDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PessoaDao.m; sourceTree = "<group>"; };
 		18DF932C1CE1337500943A2A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -222,6 +225,8 @@
 				18C5A4CF1CEE87E4004F454E /* CarrinhoAddViewController.xib */,
 				18C5A4DB1CEEA7E3004F454E /* CarrinhoViewController.h */,
 				18C5A4DC1CEEA7E3004F454E /* CarrinhoViewController.m */,
+				18C5A4E11CEFDD69004F454E /* AbstractViewController.h */,
+				18C5A4E21CEFDD69004F454E /* AbstractViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -511,6 +516,7 @@
 				18DF932B1CE1332200943A2A /* PessoaDao.m in Sources */,
 				18C5A4CA1CED668B004F454E /* Dao.m in Sources */,
 				18F36CEF1CE4CF5D0035E80B /* ComprarArtesViewController.m in Sources */,
+				18C5A4E31CEFDD69004F454E /* AbstractViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,17 +22,12 @@
     
     self.estaCadastrando = YES;
     
-    
     _pessoaBusiness = [PessoaBusiness new];
     [_pessoaBusiness carregarPessoas];
-
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /***
@@ -102,9 +97,7 @@
    
 }
 
-/***
-  Realiza o cadastro da Pessoa
- **/
+
 -(void) cadastrarPessoa {
     
     if ([self emailValido]) {
@@ -190,7 +183,6 @@
     NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:regexPattern options:NSRegularExpressionCaseInsensitive error:nil];
     NSUInteger regexMatches = [regex numberOfMatchesInString:email options:0 range:NSMakeRange(0, [email length])];
     
-    //NSLog(@"%lu", (unsigned long)regexMatches);
     if (regexMatches == 0) {
         return NO;
     } else {
@@ -199,9 +191,7 @@
 }
 
 
-/***
- Exibe alerta
- ***/
+
 -(void) exibirAlertaComTitulo: (NSString *) titulo eComMensagem: (NSString *) mensagem {
     UIAlertController *alerta = [UIAlertController alertControllerWithTitle:titulo message:mensagem preferredStyle:UIAlertControllerStyleAlert];
     
@@ -213,8 +203,7 @@
 }
 
 /***
- 
- Teclado sumir
+ Teclado desaparece
  ***/
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];

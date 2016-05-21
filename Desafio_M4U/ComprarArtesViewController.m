@@ -24,7 +24,7 @@ static NSString *url = @"http://bit.ly/livroios-500px";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _produtoBusiness = [ProdutoBusiness new];
+    self.produtoBusiness = [ProdutoBusiness new];
     self.tableView.delegate = self;
     _semInternet = NO;
     
@@ -41,7 +41,6 @@ static NSString *url = @"http://bit.ly/livroios-500px";
  Monta o NavigationBar , com titulo e buttonItem.
  ***/
 -(void) iniciarCabecalho {
-    
     
     self.navigationItem.title = @"Comprar Artes";
     
@@ -118,7 +117,7 @@ static NSString *url = @"http://bit.ly/livroios-500px";
     
     __weak CellCompraArte *weakCell = cell;
     
-    Produto *produto = [_produtoBusiness buscarProdutoComIndice:indice];
+    Produto *produto = [self.produtoBusiness buscarProdutoComIndice:indice];
     NSString *valor = [[NSString alloc]initWithFormat:@"VALOR: R$ %0.2f", produto.valor];
     
     weakCell.nomeArte.text = produto.nome;
@@ -147,12 +146,10 @@ static NSString *url = @"http://bit.ly/livroios-500px";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_produtoBusiness qtdeProduto];
+    return [self.produtoBusiness qtdeProduto];
 }
 
-/***
- Preenche a tabela
- ***/
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *cellIdentifier = @"CellCompraArte";
@@ -166,10 +163,7 @@ static NSString *url = @"http://bit.ly/livroios-500px";
     return cell;
 }
 
-/**
- 
- Arredondar Foto, muda a foto por referencia
- */
+
 -(void) arredondarFoto: (UIImageView*)imageView{
     CGRect frame = [imageView frame];
     frame.size.width = 50;
@@ -197,12 +191,11 @@ static NSString *url = @"http://bit.ly/livroios-500px";
 
 -(void) iniciaAddCarrinho {
     
-    
     if (self.produtoSelecionado) {
         CarrinhoAddViewController *addCarrinho = [[CarrinhoAddViewController alloc] initWithNibName:@"CarrinhoAddViewController" bundle:nil];
         
         addCarrinho.delegate = self;
-        addCarrinho.produto = [_produtoBusiness buscarProdutoComIndice: self.produtoSelecionado.row];
+        addCarrinho.produto = [self.produtoBusiness buscarProdutoComIndice: self.produtoSelecionado.row];
         if (!_semInternet) {
             CellCompraArte *cell = [self.tableView cellForRowAtIndexPath:_produtoSelecionado];
             addCarrinho.imagemCarregada = cell.imagemArte.image;
@@ -219,17 +212,10 @@ static NSString *url = @"http://bit.ly/livroios-500px";
 - (void)adicionadoAoCarrinho:(BOOL)adicionado oProduto:(Produto *)produto {
     
     if (adicionado) {
-        [_produtoBusiness addProdutoNoCarrinho:produto];
-        
+        [self.produtoBusiness addProdutoNoCarrinho:produto];
+        [super alterarBagdeCarrinho];
     }
     
-}
-
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"Chegou aqui");
 }
 
 

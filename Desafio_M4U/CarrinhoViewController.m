@@ -14,6 +14,9 @@
 
 @implementation CarrinhoViewController
 
+static NSString *tituloSheet = @"Tem certeza ?";
+static NSString *mensagemSheet = @"Escolha a opção";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.produtoBusiness = [ProdutoBusiness new];
@@ -32,7 +35,7 @@
 
 -(void)popularView {
     
-    NSString *valorString = [[NSString alloc] initWithFormat:@"R$ %0.2f",[_produtoBusiness valorTotalCarrinho]];
+    NSString *valorString = [[NSString alloc] initWithFormat:@"R$ %0.2f",[self.produtoBusiness valorTotalCarrinho]];
     self.valor.text = valorString;
     
     NSString *qtdeItemString = [[NSString alloc] initWithFormat:@"%ld",(long)[self.produtoBusiness qtdeCarrinho]];
@@ -47,10 +50,46 @@
 
 - (IBAction)finalizarCompras:(id)sender {
     
-    //TODO: Sheet tem certeza ?
-    //TODO: Salvar a entidade de relacoes onde 1 pessoa e N produtos
+    if ([self.produtoBusiness qtdeCarrinho] > 0) {
+        [self ativarSheet];
+    } else {
+        [self exibirAlertaComTitulo:@"Atenção" eComMensagem:@"Não contém dados no carrinho !"];
+    }
+
+    
+}
+
+
+-(void) exibirAlertaComTitulo: (NSString *) titulo eComMensagem: (NSString *) mensagem {
+    UIAlertController *alerta = [UIAlertController alertControllerWithTitle:titulo message:mensagem preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+    
+    [alerta addAction:ok];
+    
+    [self presentViewController:alerta animated:YES completion:nil];
+}
+
+
+-(void) ativarSheet{
+    UIAlertController* sheet = [UIAlertController alertControllerWithTitle:tituloSheet
+     message:mensagemSheet preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *actionSim = [UIAlertAction actionWithTitle:@"Sim"
+       style:UIAlertActionStyleDefault
+    handler:^(UIAlertAction * action) {
     
     
+    }];
+    
+    UIAlertAction *actionNao = [UIAlertAction actionWithTitle:@"Não"
+                                                            style:UIAlertActionStyleDestructive
+                                                          handler:nil];
+    
+    [sheet addAction:actionSim];
+    [sheet addAction:actionNao];
+    
+    [self presentViewController:sheet animated:YES completion:nil];
 }
 
 - (IBAction)editar:(id)sender {
@@ -76,6 +115,7 @@
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [self.produtoBusiness removeCarrinhosNoIndice:indexPath.row];
+    [super alterarBagdeCarrinho];
     [self popularView];
 }
 
@@ -100,9 +140,10 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
-    Produto *produto = [_produtoBusiness buscarCarrinhoComIndice:indexPath.row];
+    Produto *produto = [self.produtoBusiness buscarCarrinhoComIndice:indexPath.row];
     
     //TODO: por o valor do item
+    cell.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:13];
     cell.textLabel.text = produto.nome;
     cell.imageView.layer.cornerRadius = 5.0;
     return cell;
