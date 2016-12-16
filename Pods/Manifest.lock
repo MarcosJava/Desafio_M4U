@@ -20,11 +20,24 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Fabric (1.6.11)
+  - TwitterCore (2.5.0):
+    - Fabric
+  - TwitterKit (2.5.0):
+    - TwitterCore (= 2.5.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - Fabric
+  - TwitterCore
+  - TwitterKit
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  TwitterCore: 95c46af93112768a7983bd370d66023553601d01
+  TwitterKit: dd8042698b0ff5bd3066fa919b3b2b50d8eed829
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 4b60044c8726a057e535b526933c7347b75b0b79
+
+COCOAPODS: 1.1.0

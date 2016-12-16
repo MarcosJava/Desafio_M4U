@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '66BE5C20165E00F0FB70E16F'
+               BlueprintIdentifier = '9A48CFFB8D131FE9B530F68146A0CA43'
                BlueprintName = 'Pods-Desafio_M4U'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-Desafio_M4U.a'>

@@ -5,6 +5,9 @@
 
 target 'Desafio_M4U' do
     pod 'AFNetworking', '~> 2.0'
+    pod 'Fabric'
+    pod 'TwitterKit'
+    pod 'TwitterCore'
 
 end
 

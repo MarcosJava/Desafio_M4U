@@ -35,7 +35,9 @@
 		18F36CE91CE4CAA70035E80B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F36CE81CE4CAA70035E80B /* Constants.m */; };
 		18F36CEF1CE4CF5D0035E80B /* ComprarArtesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F36CEE1CE4CF5D0035E80B /* ComprarArtesViewController.m */; };
 		18F36CF31CE572F50035E80B /* CellCompraArte.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F36CF21CE572F50035E80B /* CellCompraArte.m */; };
-		19A27E8D778537A49CF5839B /* libPods-Desafio_M4U.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4AB1865115150B306EB033 /* libPods-Desafio_M4U.a */; };
+		930517E6951A764CD28D836A /* libPods-Desafio_M4UUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F342B1B9E45D19E1157B93 /* libPods-Desafio_M4UUITests.a */; };
+		CA5C63642C2FA162464D1811 /* libPods-Desafio_M4U.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0962FC63ED83FC4FDE1F5BBC /* libPods-Desafio_M4U.a */; };
+		F24B31DC118267168813631D /* libPods-Desafio_M4UTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D93301E029CEA880415F70E1 /* libPods-Desafio_M4UTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0962FC63ED83FC4FDE1F5BBC /* libPods-Desafio_M4U.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Desafio_M4U.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1876BE431CE8BD9100C1D9CE /* Produto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Produto.h; sourceTree = "<group>"; };
 		1876BE441CE8BD9100C1D9CE /* Produto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Produto.m; sourceTree = "<group>"; };
 		1876BE461CE8BE1800C1D9CE /* ProdutoDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProdutoDao.h; sourceTree = "<group>"; };
@@ -106,9 +109,14 @@
 		18F36CEE1CE4CF5D0035E80B /* ComprarArtesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComprarArtesViewController.m; sourceTree = "<group>"; };
 		18F36CF11CE572F50035E80B /* CellCompraArte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellCompraArte.h; sourceTree = "<group>"; };
 		18F36CF21CE572F50035E80B /* CellCompraArte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellCompraArte.m; sourceTree = "<group>"; };
-		2A4AB1865115150B306EB033 /* libPods-Desafio_M4U.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Desafio_M4U.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		569A84F2AF9015C1DC880D8B /* Pods-Desafio_M4U.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio_M4U.release.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio_M4U/Pods-Desafio_M4U.release.xcconfig"; sourceTree = "<group>"; };
-		6746E82EEAF986E68EE42F17 /* Pods-Desafio_M4U.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio_M4U.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio_M4U/Pods-Desafio_M4U.debug.xcconfig"; sourceTree = "<group>"; };
+		5CD525F5DBE7CD1D1A508E7C /* Pods-Desafio_M4UUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio_M4UUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio_M4UUITests/Pods-Desafio_M4UUITests.release.xcconfig"; sourceTree = "<group>"; };
+		63F20E1B6F0265159BF31A00 /* Pods-Desafio_M4UUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio_M4UUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio_M4UUITests/Pods-Desafio_M4UUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6DEBE0005790910619960B6C /* Pods-Desafio_M4UTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio_M4UTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio_M4UTests/Pods-Desafio_M4UTests.release.xcconfig"; sourceTree = "<group>"; };
+		76F342B1B9E45D19E1157B93 /* libPods-Desafio_M4UUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Desafio_M4UUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D93301E029CEA880415F70E1 /* libPods-Desafio_M4UTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Desafio_M4UTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F292262F1AB8BEE05B33EAAD /* Pods-Desafio_M4U.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio_M4U.release.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio_M4U/Pods-Desafio_M4U.release.xcconfig"; sourceTree = "<group>"; };
+		F3C8FD33643F7D0D89131FB1 /* Pods-Desafio_M4UTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio_M4UTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio_M4UTests/Pods-Desafio_M4UTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F5B417E52D88A0FAC64EFD28 /* Pods-Desafio_M4U.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio_M4U.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio_M4U/Pods-Desafio_M4U.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DF932D1CE1337500943A2A /* CoreData.framework in Frameworks */,
-				19A27E8D778537A49CF5839B /* libPods-Desafio_M4U.a in Frameworks */,
+				CA5C63642C2FA162464D1811 /* libPods-Desafio_M4U.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F24B31DC118267168813631D /* libPods-Desafio_M4UTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				930517E6951A764CD28D836A /* libPods-Desafio_M4UUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +156,8 @@
 				18BC46581CDFBE02006DC885 /* Desafio_M4UTests */,
 				18BC46631CDFBE02006DC885 /* Desafio_M4UUITests */,
 				18BC463A1CDFBE01006DC885 /* Products */,
-				F242BB4D7255FE12E74E5E07 /* Pods */,
-				D677FA5CABDE280D988952D0 /* Frameworks */,
+				5A8154BB7991F4F4CBBF39E1 /* Pods */,
+				F5D9DD2148DEBFEB009B369C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -308,21 +318,27 @@
 			name = view;
 			sourceTree = "<group>";
 		};
-		D677FA5CABDE280D988952D0 /* Frameworks */ = {
+		5A8154BB7991F4F4CBBF39E1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2A4AB1865115150B306EB033 /* libPods-Desafio_M4U.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F242BB4D7255FE12E74E5E07 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6746E82EEAF986E68EE42F17 /* Pods-Desafio_M4U.debug.xcconfig */,
-				569A84F2AF9015C1DC880D8B /* Pods-Desafio_M4U.release.xcconfig */,
+				F5B417E52D88A0FAC64EFD28 /* Pods-Desafio_M4U.debug.xcconfig */,
+				F292262F1AB8BEE05B33EAAD /* Pods-Desafio_M4U.release.xcconfig */,
+				F3C8FD33643F7D0D89131FB1 /* Pods-Desafio_M4UTests.debug.xcconfig */,
+				6DEBE0005790910619960B6C /* Pods-Desafio_M4UTests.release.xcconfig */,
+				63F20E1B6F0265159BF31A00 /* Pods-Desafio_M4UUITests.debug.xcconfig */,
+				5CD525F5DBE7CD1D1A508E7C /* Pods-Desafio_M4UUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F5D9DD2148DEBFEB009B369C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0962FC63ED83FC4FDE1F5BBC /* libPods-Desafio_M4U.a */,
+				D93301E029CEA880415F70E1 /* libPods-Desafio_M4UTests.a */,
+				76F342B1B9E45D19E1157B93 /* libPods-Desafio_M4UUITests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,12 +348,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18BC46691CDFBE02006DC885 /* Build configuration list for PBXNativeTarget "Desafio_M4U" */;
 			buildPhases = (
-				B4BF241CC31ED50CF8BD1AEE /* Check Pods Manifest.lock */,
+				DD2D47C3E280FCADFF007DF4 /* [CP] Check Pods Manifest.lock */,
 				18BC46351CDFBE01006DC885 /* Sources */,
 				18BC46361CDFBE01006DC885 /* Frameworks */,
 				18BC46371CDFBE01006DC885 /* Resources */,
-				080845082DADF96FFFD1DB81 /* Embed Pods Frameworks */,
-				5EA82F4C005B3DB4E76DDE0F /* Copy Pods Resources */,
+				C8DE9752CD565FDCA0BC05D5 /* [CP] Embed Pods Frameworks */,
+				6DFB8B713272B70C44683F08 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -352,9 +368,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18BC466C1CDFBE02006DC885 /* Build configuration list for PBXNativeTarget "Desafio_M4UTests" */;
 			buildPhases = (
+				B5B37846D9D91E2D711B3D03 /* [CP] Check Pods Manifest.lock */,
 				18BC46511CDFBE02006DC885 /* Sources */,
 				18BC46521CDFBE02006DC885 /* Frameworks */,
 				18BC46531CDFBE02006DC885 /* Resources */,
+				1508D706D9168A1B98FA8D83 /* [CP] Embed Pods Frameworks */,
+				5A9921A8F43F65289D225E08 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -370,9 +389,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18BC466F1CDFBE02006DC885 /* Build configuration list for PBXNativeTarget "Desafio_M4UUITests" */;
 			buildPhases = (
+				F49AF4C0D57052D23DEEF13F /* [CP] Check Pods Manifest.lock */,
 				18BC465C1CDFBE02006DC885 /* Sources */,
 				18BC465D1CDFBE02006DC885 /* Frameworks */,
 				18BC465E1CDFBE02006DC885 /* Resources */,
+				868DB97F2EBA66140D0E9F0D /* [CP] Embed Pods Frameworks */,
+				3F5A9BD1B79CFF9DA5DF4E5C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -461,29 +483,59 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		080845082DADF96FFFD1DB81 /* Embed Pods Frameworks */ = {
+		1508D706D9168A1B98FA8D83 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Desafio_M4U/Pods-Desafio_M4U-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Desafio_M4UTests/Pods-Desafio_M4UTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5EA82F4C005B3DB4E76DDE0F /* Copy Pods Resources */ = {
+		3F5A9BD1B79CFF9DA5DF4E5C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Desafio_M4UUITests/Pods-Desafio_M4UUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A9921A8F43F65289D225E08 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Desafio_M4UTests/Pods-Desafio_M4UTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DFB8B713272B70C44683F08 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,19 +543,79 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Desafio_M4U/Pods-Desafio_M4U-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B4BF241CC31ED50CF8BD1AEE /* Check Pods Manifest.lock */ = {
+		868DB97F2EBA66140D0E9F0D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Desafio_M4UUITests/Pods-Desafio_M4UUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5B37846D9D91E2D711B3D03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C8DE9752CD565FDCA0BC05D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Desafio_M4U/Pods-Desafio_M4U-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD2D47C3E280FCADFF007DF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F49AF4C0D57052D23DEEF13F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -667,7 +779,7 @@
 		};
 		18BC466A1CDFBE02006DC885 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6746E82EEAF986E68EE42F17 /* Pods-Desafio_M4U.debug.xcconfig */;
+			baseConfigurationReference = F5B417E52D88A0FAC64EFD28 /* Pods-Desafio_M4U.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -680,7 +792,7 @@
 		};
 		18BC466B1CDFBE02006DC885 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 569A84F2AF9015C1DC880D8B /* Pods-Desafio_M4U.release.xcconfig */;
+			baseConfigurationReference = F292262F1AB8BEE05B33EAAD /* Pods-Desafio_M4U.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -693,6 +805,7 @@
 		};
 		18BC466D1CDFBE02006DC885 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3C8FD33643F7D0D89131FB1 /* Pods-Desafio_M4UTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = Desafio_M4UTests/Info.plist;
@@ -705,6 +818,7 @@
 		};
 		18BC466E1CDFBE02006DC885 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DEBE0005790910619960B6C /* Pods-Desafio_M4UTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = Desafio_M4UTests/Info.plist;
@@ -717,6 +831,7 @@
 		};
 		18BC46701CDFBE02006DC885 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63F20E1B6F0265159BF31A00 /* Pods-Desafio_M4UUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Desafio_M4UUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -729,6 +844,7 @@
 		};
 		18BC46711CDFBE02006DC885 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CD525F5DBE7CD1D1A508E7C /* Pods-Desafio_M4UUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Desafio_M4UUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

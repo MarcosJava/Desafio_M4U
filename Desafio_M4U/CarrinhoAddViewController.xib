@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarrinhoAddViewController">
@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G83-qQ-DSI">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G83-qQ-DSI">
                     <rect key="frame" x="24" y="36" width="544" height="318"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="297" id="JER-5N-bGK"/>
@@ -235,27 +235,27 @@
                     <exclude reference="Gz9-fA-qcg"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="3yK-ay-A5e"/>
-                    <exclude reference="6U8-IF-8vx"/>
-                    <exclude reference="a9U-Fg-HIE"/>
-                    <exclude reference="9bq-St-Cs5"/>
-                    <exclude reference="fMX-tT-yqu"/>
-                    <exclude reference="P3Z-LB-RfG"/>
-                    <exclude reference="dtt-Gs-Ll2"/>
-                    <exclude reference="kqs-HN-USD"/>
-                    <exclude reference="uuC-Jx-tzp"/>
-                    <exclude reference="FF7-fZ-KIq"/>
-                    <exclude reference="eIP-LJ-KGx"/>
-                    <exclude reference="uog-Ue-GnG"/>
-                    <exclude reference="VoF-yE-NbJ"/>
-                    <exclude reference="d7y-v8-1vb"/>
-                    <exclude reference="hSU-NZ-QRM"/>
                     <exclude reference="TgL-zi-djP"/>
                     <exclude reference="aHe-o1-CaQ"/>
                     <exclude reference="rsg-h1-gjS"/>
+                    <exclude reference="kqs-HN-USD"/>
+                    <exclude reference="uuC-Jx-tzp"/>
+                    <exclude reference="P3Z-LB-RfG"/>
+                    <exclude reference="dtt-Gs-Ll2"/>
+                    <exclude reference="VoF-yE-NbJ"/>
+                    <exclude reference="d7y-v8-1vb"/>
+                    <exclude reference="hSU-NZ-QRM"/>
+                    <exclude reference="9bq-St-Cs5"/>
+                    <exclude reference="fMX-tT-yqu"/>
                     <exclude reference="gUh-ws-6Rd"/>
                     <exclude reference="khg-BJ-sxC"/>
                     <exclude reference="sf9-Hz-amu"/>
+                    <exclude reference="FF7-fZ-KIq"/>
+                    <exclude reference="eIP-LJ-KGx"/>
+                    <exclude reference="uog-Ue-GnG"/>
+                    <exclude reference="3yK-ay-A5e"/>
+                    <exclude reference="6U8-IF-8vx"/>
+                    <exclude reference="a9U-Fg-HIE"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -269,27 +269,27 @@
                     <include reference="Gz9-fA-qcg"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="3yK-ay-A5e"/>
-                    <include reference="6U8-IF-8vx"/>
-                    <include reference="a9U-Fg-HIE"/>
-                    <include reference="9bq-St-Cs5"/>
-                    <include reference="fMX-tT-yqu"/>
-                    <include reference="P3Z-LB-RfG"/>
-                    <include reference="dtt-Gs-Ll2"/>
-                    <include reference="kqs-HN-USD"/>
-                    <include reference="uuC-Jx-tzp"/>
-                    <include reference="FF7-fZ-KIq"/>
-                    <include reference="eIP-LJ-KGx"/>
-                    <include reference="uog-Ue-GnG"/>
-                    <include reference="VoF-yE-NbJ"/>
-                    <include reference="d7y-v8-1vb"/>
-                    <include reference="hSU-NZ-QRM"/>
                     <include reference="TgL-zi-djP"/>
                     <include reference="aHe-o1-CaQ"/>
                     <include reference="rsg-h1-gjS"/>
+                    <include reference="kqs-HN-USD"/>
+                    <include reference="uuC-Jx-tzp"/>
+                    <include reference="P3Z-LB-RfG"/>
+                    <include reference="dtt-Gs-Ll2"/>
+                    <include reference="VoF-yE-NbJ"/>
+                    <include reference="d7y-v8-1vb"/>
+                    <include reference="hSU-NZ-QRM"/>
+                    <include reference="9bq-St-Cs5"/>
+                    <include reference="fMX-tT-yqu"/>
                     <include reference="gUh-ws-6Rd"/>
                     <include reference="khg-BJ-sxC"/>
                     <include reference="sf9-Hz-amu"/>
+                    <include reference="FF7-fZ-KIq"/>
+                    <include reference="eIP-LJ-KGx"/>
+                    <include reference="uog-Ue-GnG"/>
+                    <include reference="3yK-ay-A5e"/>
+                    <include reference="6U8-IF-8vx"/>
+                    <include reference="a9U-Fg-HIE"/>
                 </mask>
             </variation>
         </view>
