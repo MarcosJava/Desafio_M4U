@@ -2,6 +2,12 @@
 Desafio para testar a capacidade. 
 <br />
 
+<video width="400" controls>
+  <source src="Desafio_M4U.mov" type="video/mp4">
+</video>
+
+<br><br>
+
 Arquitetura utilizada foi a MVC com DAO, colocando uma camada a mais para separar melhor as responsabilidades.
 <br /><br />
 Não foi utilizado framework para persistência, pois utilizei o singleton nos DAO’s . 
