@@ -3,7 +3,7 @@ Desafio para testar a capacidade.
 <br />
 
 <video width="400" controls>
-  <source src="Desafio_M4U.mov" type="video/mp4">
+  <source src="Desafio_M4U.mov" type="video/mov">
 </video>
 
 <br><br>
